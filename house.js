@@ -10,7 +10,8 @@ $("#counter2").hide();
 document.getElementById("start_button").addEventListener("click", () => {
   document.getElementById("starter").hidden = true;
   document.getElementById("room1").hidden = false;
-  audioPlayer.pause()
+  // audioPlayer.pause()
+  new Audio("resources/audio/title-screen-theme.mp3").play()
   $("#counter").show();
   $("#counter2").show();
   $("#instructions").hide();
@@ -51,6 +52,7 @@ document.getElementById("door2leave4").addEventListener("click", () => {
 });
 
 document.getElementById("door4").addEventListener("click", () => {
+  new Audio("resources/audio/MainJumpscare.mp3").play()
   document.getElementById("room1").hidden = true;
   document.getElementById("room5").hidden = false;
   console.log("open door 5 - Senance Room ")
